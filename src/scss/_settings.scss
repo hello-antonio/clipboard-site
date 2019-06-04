@@ -1,0 +1,41 @@
+// colors
+$c-primary: #00796b; // body, button
+$c-primary-blue: #6173FF; // button
+$c-button-ios: #26BAA4;
+$c-button-blue-hover: #8896FF;
+$c-button-hover: lighten($c-button-ios, 2);
+
+$c-neutral-dark: #4C545D; // links, icons, headings
+$c-neutral-light: #9FABB2; // links, icons hover
+
+// fonts
+$font-family-default: -apple-system,
+BlinkMacSystemFont,
+'Segoe UI',
+Roboto,
+Oxygen,
+Ubuntu,
+Cantarell,
+'Open Sans',
+'Helvetica Neue',
+sans-serif;
+$font-family-theme: "Bai Jamjuree";
+
+$font-regular: 400;
+$font-bold: 600;
+
+$font-base: 18px;
+$h1: 44.5px;
+$h2: 35px;
+$h3: 23px;
+$body-large: 19.8px;
+$body-small: 1rem;
+
+// media
+$mobile-width: 375px;
+$desktop-width: 1440px;
+
+// container
+$container-width: 1120px+($font-base*2);
+$gutter: 32px;
+$padding: 1em;

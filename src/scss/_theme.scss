@@ -1,0 +1,191 @@
+// HEADER
+.logo {
+    background: url(../images/logo.svg) no-repeat center;
+    text-indent: -99999px;
+    margin: 0 0 2em;
+
+    &--header {
+        background-size: 125px;
+        height: 125px;
+    }
+
+    &--footer {
+        background-size: 32px;
+        height: 32px;
+
+        @media screen and (min-width: 375px) {
+            background-size: 64px;
+            height: 64px;
+        }
+    }
+}
+
+.logos {
+    li {
+        display: inline-block;
+        padding: 1em;
+        margin: 1rem;
+        text-align: center;
+    }
+}
+
+// BUTTONS
+.btn {
+    display: inline-block;
+    min-height: 52px;
+    min-width: 226px;
+    padding: 1.25em 1em;
+    margin: 0 0.5em;
+    border-radius: 48px;
+    border: transparent;
+    background-color: inherit;
+    color: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 0;
+    transition: background ease-in-out 250ms;
+    font-family: inherit;
+
+    &--ios {
+        background-color: $c-button-ios;
+        box-shadow: 0 2px 0 2px rgba(darken($c-button-ios, 1), 1);
+        color: #fff;
+
+        &:hover {
+            background-color: $c-button-ios;
+        }
+    }
+
+    &--mac {
+        background-color: $c-primary-blue;
+        color: #fff;
+        box-shadow: 0 2px 0 2px rgba(darken($c-primary-blue, 1), 1);
+
+        &:hover {
+            background-color: $c-button-blue-hover;
+        }
+    }
+}
+
+// HEADER
+.header {
+    background-size: 100%;
+    background: url(../images/bg-header-mobile.png) no-repeat center top;
+
+    @media screen and (min-width: 376px) {
+        background: url(../images/bg-header-desktop.png) no-repeat center top;
+        background-size: 100%;
+
+    }
+}
+
+// FEATURES
+.feature {
+    text-align: center;
+
+    p {
+        width: 100%;
+        max-width: 350px;
+        margin: auto;
+    }
+
+    @media screen and (min-width: 700px) {
+        text-align: left;
+    }
+
+}
+
+// CONTENT
+.content-center {
+    text-align: center;
+
+    p {
+        width: 100%;
+        max-width: 736px;
+        margin: 0 auto 4em;
+    }
+}
+
+// IMAGES
+.image {
+    width: 100%;
+
+    &--computer {
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+
+        @media screen and (min-width:900px) {
+            max-width: 752px;
+            margin: 0 0 0 -17%;
+        }
+    }
+
+    &--devices {
+        width: 100%;
+        max-width: calc(905px / 2);
+        margin: auto;
+
+        @media screen and (min-width:900px) {
+            max-width: 905px;
+        }
+    }
+}
+
+// FOOTER
+.footer {
+    background-color: lighten($c-neutral-light, 30);
+}
+
+.footer__nav {
+    li {
+        display: inline-block;
+        width: 100%;
+        margin: 0 0 1em;
+        text-align: center;
+
+        @media screen and (min-width:700px) {
+            width: 26%;
+            text-align: left;
+        }
+    }
+}
+
+// ICONS
+.icons-group {
+    order: 1;
+    flex: 0 1 auto;
+    margin: 0 auto;
+    width: 20%;
+}
+
+.icon {
+    display: inline-block;
+    width: 1.333em;
+    height: 1.333em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    margin: 0 auto;
+}
+
+/* ==========================================
+  Single-colored icons can be modified like so:
+  .icon-name {
+    font-size: 32px;
+    color: red;
+  }
+  ========================================== */
+
+.icon-facebook-square {
+    width: 0.8571428571428571em;
+}
+
+.icon-twitter {
+    width: 0.9285714285714285em;
+}
+
+.icon-instagram {
+    width: 0.8571428571428571em;
+}

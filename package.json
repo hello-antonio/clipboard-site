@@ -2,7 +2,6 @@
   "name": "clipboard-landing-page-master",
   "version": "1.0.0",
   "description": "Website challenge",
-  "main": "index.js",
   "private": true,
   "browserslist": [
     "> 1%",
@@ -13,8 +12,9 @@
   },
   "scripts": {
     "prebuild": "rm -rf docs/*",
-    "start": "parcel build src/index.html --open --out-dir docs",
+    "start": "parcel serve src/index.html --open --out-dir docs",
     "build": "parcel build src/index.html --out-dir docs --public-url ./",
+    "watch": "parcel watch --out-dir docs src/index.html --no-cache",
     "deploy": "npm run build && git add . && git commit -a -m 'latest build' && git push origin master"
   },
   "devDependencies": {

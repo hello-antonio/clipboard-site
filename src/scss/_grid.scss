@@ -1,0 +1,80 @@
+.container {
+    width: 100%;
+    max-width: $container-width;
+    margin: auto;
+    padding: 0 $padding;
+
+    @media screen and (min-width: 600px) {
+        width: 80%
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 98%
+    }
+
+}
+
+.row {
+    width: 100%;
+    margin: 1em auto;
+}
+
+.group {
+    margin: 0 auto;
+}
+
+.col-half,
+.col-2,
+.col-4,
+.col-8 {
+    order: 1;
+    flex: 0 1 auto;
+    width: 98%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 700px) {
+    .col-2 {
+        width: 160px;
+    }
+
+    .col-4 {
+        width: 352px;
+    }
+
+    .col-8 {
+        width: 736px;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    .col-half {
+        width: 50%;
+    }
+}
+
+.flex {
+    display: flex;
+
+    &--wrap {
+        flex-wrap: wrap;
+    }
+
+    &--row {
+        flex-flow: row wrap;
+    }
+
+    &--column {
+        flex-flow: column nowrap;
+    }
+
+    &--center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &--gutter {
+        justify-content: space-between;
+    }
+}
