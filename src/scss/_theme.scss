@@ -30,12 +30,13 @@
 }
 
 // BUTTONS
+
 .btn {
     display: inline-block;
     min-height: 52px;
     min-width: 226px;
     padding: 1.25em 1em;
-    margin: 0 0.5em;
+    margin: 0 0.5em 1em;
     border-radius: 48px;
     border: transparent;
     background-color: inherit;
@@ -53,7 +54,8 @@
         color: #fff;
 
         &:hover {
-            background-color: $c-button-ios;
+            background-color: $c-button-hover;
+            box-shadow: 0 2px 0 3px rgba(darken($c-button-ios, 1), 0.85);
         }
     }
 
@@ -64,6 +66,7 @@
 
         &:hover {
             background-color: $c-button-blue-hover;
+            box-shadow: 0 2px 0 3px rgba(darken($c-primary-blue, 1), 0.85);
         }
     }
 }
@@ -157,7 +160,8 @@
     order: 1;
     flex: 0 1 auto;
     margin: 0 auto;
-    width: 20%;
+    width: 30%;
+    max-width: 200px;
 }
 
 .icon {
@@ -169,14 +173,6 @@
     fill: currentColor;
     margin: 0 auto;
 }
-
-/* ==========================================
-  Single-colored icons can be modified like so:
-  .icon-name {
-    font-size: 32px;
-    color: red;
-  }
-  ========================================== */
 
 .icon-facebook-square {
     width: 0.8571428571428571em;

@@ -1,6 +1,7 @@
 :focus {
-    outline-color: black;
-    outline-offset: 0.5px;
+    outline-color: $c-primary;
+    outline-width: 3px;
+    outline-offset: 5px;
     outline-style: dashed;
 }
 
