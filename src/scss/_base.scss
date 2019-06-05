@@ -58,11 +58,11 @@ h3 {
 }
 
 h1 {
-    font-size: $h1;
+    font-size: $h1 / 1.5;
 }
 
 h2 {
-    font-size: $h2;
+    font-size: $h2 / 1.333;
 }
 
 h3 {
@@ -92,6 +92,19 @@ footer {
     section {
         padding: 4em 0;
     }
+
+    h1 {
+        font-size: $h1;
+    }
+
+    h2 {
+        font-size: $h2;
+    }
+
+    h3 {
+        font-size: $h3;
+    }
+
 }
 
 img {

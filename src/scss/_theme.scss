@@ -3,6 +3,7 @@
     background: url(../images/logo.svg) no-repeat center;
     text-indent: -99999px;
     margin: 0 0 2em;
+    width: auto;
 
     &--header {
         background-size: 125px;
@@ -30,13 +31,23 @@
 }
 
 // BUTTONS
+@mixin btnStyle($theme-color, $color: #fff) {
+    background-color: $theme-color;
+    box-shadow: 0 1px 0 2px rgba(darken($theme-color, 3), 1), 0 2px 25px 0 rgba(darken($theme-color, 50), 0.2);
+    color: $color;
+}
+
+@mixin btnHover($theme-color) {
+    background-color: lighten($theme-color, 5);
+    box-shadow: 0 2px 0 2px rgba(darken($theme-color, 1), 0.85), 0 1px 20px 0 rgba(darken($theme-color, 50), 0.15);
+}
 
 .btn {
     display: inline-block;
     min-height: 52px;
-    min-width: 226px;
+    width: 100%;
+    margin: 0 auto 1em;
     padding: 1.25em 1em;
-    margin: 0 0.5em 1em;
     border-radius: 48px;
     border: transparent;
     background-color: inherit;
@@ -48,25 +59,24 @@
     transition: background ease-in-out 250ms;
     font-family: inherit;
 
+    @media screen and (min-width: 700px) {
+        width: 226px;
+        margin: 0 0.5em 1em;
+    }
+
     &--ios {
-        background-color: $c-button-ios;
-        box-shadow: 0 2px 0 2px rgba(darken($c-button-ios, 1), 1);
-        color: #fff;
+        @include btnStyle($c-button-ios);
 
         &:hover {
-            background-color: $c-button-hover;
-            box-shadow: 0 2px 0 3px rgba(darken($c-button-ios, 1), 0.85);
+            @include btnHover($c-button-ios);
         }
     }
 
     &--mac {
-        background-color: $c-primary-blue;
-        color: #fff;
-        box-shadow: 0 2px 0 2px rgba(darken($c-primary-blue, 1), 1);
+        @include btnStyle($c-primary-blue);
 
         &:hover {
-            background-color: $c-button-blue-hover;
-            box-shadow: 0 2px 0 3px rgba(darken($c-primary-blue, 1), 0.85);
+            @include btnHover($c-primary-blue);
         }
     }
 }
@@ -90,10 +100,10 @@
     p {
         width: 100%;
         max-width: 350px;
-        margin: auto;
+        margin: 0 auto 2em;
     }
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 800px) {
         text-align: left;
     }
 
@@ -117,9 +127,9 @@
     &--computer {
         width: 100%;
         max-width: 300px;
-        margin: auto;
+        margin: 0 auto 4em;
 
-        @media screen and (min-width:900px) {
+        @media screen and (min-width:1200px) {
             max-width: 752px;
             margin: 0 0 0 -17%;
         }
